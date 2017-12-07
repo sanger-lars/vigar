@@ -5,12 +5,13 @@ var gulp = require('gulp'),
 	simplevars = require('postcss-simple-vars'),
 	nested = require('postcss-nested'),
 	cssImport = require('postcss-import'),
-	mixins = require('postcss-mixins');
+	mixins = require('postcss-mixins'),
+	browserSync = require('browser-sync').create();
 
 
 
 gulp.task('html', function() {
-	console.log("html-filen er ændret !");
+	browserSync.reload();
 });
 
 gulp.task('styles', function() {
@@ -21,12 +22,25 @@ gulp.task('styles', function() {
 
 gulp.task('watch', function() {
 
+	browserSync.init({
+		host: "192.168.0.101",
+		notify: false,
+		server: {
+			baseDir: "app"
+		}
+	});
+
 	watch('./app/index.html', function() {
 		gulp.start('html');
 	});
 
 	watch('./app/assets/styles/**/*.css', function() {
-		gulp.start('styles');
+		gulp.start('cssInject');
 	});
+});
+
+gulp.task('cssInject', ['styles'], function(){
+	return gulp.src('./app/temp/styles/styles.css')
+	.pipe(browserSync.stream());
 });
 

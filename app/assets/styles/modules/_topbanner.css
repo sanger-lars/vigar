@@ -2,18 +2,20 @@
 	display: inline-block;
 	width: 100%;
 	height: 111px;
-	background-image: url('../../kfum_hvid_1.gif'), url('../../hyt2_banner.jpg');
+	background-image: url('../../kfum_trans.png'), url('../../hyt2_banner.jpg');
 	background-position: right center, center center;
-	background-size: 10%, 100%;
+	background-size: 20%, 200%;
 	background-repeat: no-repeat;
 	
 
 	@mixin atMedium {
 		height: 200px;
+		background-size: 15%, 150%;
 	
 	}
 
 		@mixin atLarge {
 		height: 100px, 250px ;
+		background-size: 11%, 100%;
 	}
 }
