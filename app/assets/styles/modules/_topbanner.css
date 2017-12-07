@@ -1,0 +1,19 @@
+.topbanner {
+	display: inline-block;
+	width: 100%;
+	height: 111px;
+	background-image: url('../../kfum_hvid_1.gif'), url('../../hyt2_banner.jpg');
+	background-position: right center, center center;
+	background-size: 10%, 100%;
+	background-repeat: no-repeat;
+	
+
+	@mixin atMedium {
+		height: 200px;
+	
+	}
+
+		@mixin atLarge {
+		height: 100px, 250px ;
+	}
+}
