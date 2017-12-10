@@ -6,16 +6,45 @@
 	background-position: right center, center center;
 	background-size: 20%, 200%;
 	background-repeat: no-repeat;
-	
+	position: relative;
+
+	p {
+		font-size: 1.5rem;
+		color: green;
+		position: absolute;
+		top: 30%;
+		text-align: center;
+		transform: translateY(-50%);
+		width: 80%;
+		border: 1px solid black;
+	}
+
+	@mixin atSmall {
+		p {
+			width: 85%;
+		}
+	}
 
 	@mixin atMedium {
+		
 		height: 200px;
 		background-size: 15%, 150%;
+
+		p {
+			font-size: 2.0rem;
+		}
+
 	
 	}
 
-		@mixin atLarge {
+	@mixin atLarge {
 		height: 100px, 250px ;
 		background-size: 11%, 100%;
+	
+	
+		p {
+			font-size: 2.5rem;
+			width: 89%;
+		}
 	}
 }
