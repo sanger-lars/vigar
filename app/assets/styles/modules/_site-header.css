@@ -3,20 +3,30 @@
 	position: absolute;
 	width: 100%;
 	z-index: 2;
-	background-color: rgba($mainGreen, .55);
+	background-color: rgba(0,113,98, .55);
 	transition: background-color .3s ease-out;
+	display: none;
+
+
 		
 	&--is-expanded {
-		background-color: rgba($mainGreen, .55);
+		background-color: rgba($logoGreen, .55);
 	}
 
 	@mixin atMedium {
+		
 		position: fixed;
-		background-color: rgba($mainGreen, .3);	
-
+		background-color: rgba($logoGreen, .66);	
+		
+		width: 100%;
+		display: block;
+		text-align: center;
+		padding: 5px 0;
+		position: relative;
+		top: -30px;
 		&--dark {
-			background-color: rgba(23, 51, 72, .85);	
-		}	
+			background-color: rgba($logoGreen, .85);	
+		}
 	}
 
 

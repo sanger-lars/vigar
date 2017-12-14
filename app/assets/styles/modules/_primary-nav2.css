@@ -1,0 +1,26 @@
+.primary-nav2 {
+	padding-top: 0px;
+	color: $logoYellow;
+
+
+	ul {
+		margin: 0;
+		padding: 0;
+		@mixin clearfix;
+	}
+
+	li {
+		list-style: none;
+		float: left;
+		padding-right: 15px;
+	}
+
+	@mixin atMedium {
+		font-size: 1rem;
+	}
+
+	@mixin atLarge {
+		font-size: 1.2rem;
+	}
+
+}

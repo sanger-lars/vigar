@@ -492,7 +492,7 @@ a {
 		padding-right: 0;
 	}
 
-@media (min-width: 600px) {
+@media (min-width: 780px) {
 
 .wrapper--no-padding-until-medium {
 			padding-left: 18px;
@@ -532,17 +532,18 @@ a {
 .topbanner {
 	display: inline-block;
 	width: 100%;
-	height: 111px;
-	background-image: url('../../kfum_trans.png'), url('../../hyt2_banner.jpg');
+	height: 150px;
+	background-image: url('../../assets/images/kfum_trans.png'), url('../../assets/images/hyt2_banner.jpg');
 	background-position: right center, center center;
-	background-size: 20%, 200%;
+	background-size: 18%, 200%;
 	background-repeat: no-repeat;
 	position: relative;
 }
 
 .topbanner p {
-		font-size: 1.5rem;
-		color: green;
+		font-size: 1.2rem;
+		color: #93cc19;
+		font-weight: bold;
 		position: absolute;
 		top: 30%;
 		text-align: center;
@@ -552,17 +553,22 @@ a {
 	}
 
 @media (min-width: 370px) {
+
+.topbanner {
+		background-size: 14%, 200%
+}
 		.topbanner p {
+			font-size: 1.5rem;
 			width: 85%;
 		}
 	}
 
-@media (min-width: 600px) {
+@media (min-width: 780px) {
 
 .topbanner {
 		
 		height: 200px;
-		background-size: 15%, 150%
+		background-size: 14%, 150%
 }
 
 		.topbanner p {
@@ -589,24 +595,32 @@ a {
 	position: absolute;
 	width: 100%;
 	z-index: 2;
-	background-color: rgba(96,243,5, .55);
+	background-color: rgba(0,113,98, .55);
 	-webkit-transition: background-color .3s ease-out;
 	transition: background-color .3s ease-out;
+	display: none;
 }
 
 .site-header--is-expanded {
-		background-color: rgba(96,243,5, .55);
+		background-color: rgba(0,113,98, .55);
 	}
 
-@media (min-width: 600px) {
+@media (min-width: 780px) {
 
 .site-header {
+		
 		position: fixed;
-		background-color: rgba(96,243,5, .3)
-}	
-
+		background-color: rgba(0,113,98, .66);	
+		
+		width: 100%;
+		display: block;
+		text-align: center;
+		padding: 5px 0;
+		position: relative;
+		top: -30px
+}
 		.site-header--dark {
-			background-color: rgba(23, 51, 72, .85);	
+			background-color: rgba(0,113,98, .85);	
 		}
 	}
 
@@ -664,7 +678,7 @@ a {
 			transition: transform .3s ease-out, -webkit-transform .3s ease-out;
 		}
 
-@media (min-width: 600px) {
+@media (min-width: 780px) {
 
 .site-header__menu-icon {
 			display: none
@@ -701,7 +715,7 @@ a {
 		text-align: center;
 	}
 
-@media (min-width: 600px) {
+@media (min-width: 780px) {
 
 .site-header__menu-content {
 			opacity: 1;
@@ -721,6 +735,7 @@ a {
 
 .primary-nav2 {
 	padding-top: 0px;
+	color: #93cc19;
 
 }
 
@@ -741,7 +756,7 @@ a {
 		padding-right: 15px;
 	}
 
-@media (min-width: 600px) {
+@media (min-width: 780px) {
 
 .primary-nav2 {
 		font-size: 1rem
