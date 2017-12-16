@@ -1,0 +1,61 @@
+.main-page {
+
+	#traetop {
+		width: 100%;
+		height: auto;
+
+		@mixin atMedium {
+			width: 50%;
+			height: auto;
+			float: right;
+		}
+	}
+
+
+		
+	p {
+		font-size: 0.8rem;
+		font-weight: bold;
+		text-align: justify;
+
+ 		@mixin atMedium {
+			font-size: 0.7rem;
+		}
+	}
+}
+
+
+.bliv_medlem {
+	clear: both;
+	text-align: center;
+	width: 100%;
+	height: auto;
+	
+
+}
+
+.bliv_medlem img {
+	width: 400px;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.clear {
+	clear: both;
+}
+
+#spejderi {
+
+	width: 100%;
+	float: none;
+	
+	 @mixin atMedium{
+		float: left;
+		width: 48%;
+	}
+		
+}
+	
+
+
