@@ -13,5 +13,13 @@ img {
 }
 
 a {
-	color: $mainOrange;
+	color: $logoYellow;
+	text-decoration: none;
+
+
 }
+a:hover {
+	color: $logoRed;
+	font-weight: bold;
+	cursor: pointer;
+};

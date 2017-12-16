@@ -3,8 +3,8 @@
 	width: 100%;
 	height: 150px;
 	background-image: url('../../assets/images/kfum_trans.png'), url('../../assets/images/hyt2_banner.jpg');
-	background-position: right center, center center;
-	background-size: 18%, 200%;
+	background-position: right bottom, center center;
+	background-size: 30%, 200%;
 	background-repeat: no-repeat;
 	position: relative;
 
@@ -20,7 +20,8 @@
 	}
 
 	@mixin atSmall {
-		background-size: 14%, 200%;
+		background-size: 20%, 200%;
+		background-position: right center, center center;
 		p {
 			font-size: 1.5rem;
 			width: 85%;
@@ -31,6 +32,7 @@
 		
 		height: 200px;
 		background-size: 14%, 150%;
+		background-position: right center, center center;
 
 		p {
 			font-size: 2.0rem;

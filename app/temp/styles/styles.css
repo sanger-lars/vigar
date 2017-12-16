@@ -466,8 +466,17 @@ img {
 }
 
 a {
-	color: #D59541;
+	color: #93cc19;
+	text-decoration: none;
+
+
 }
+
+a:hover {
+	color: #cd3c43;
+	font-weight: bold;
+	cursor: pointer;
+};
 
 .wrapper {
 	overflow: hidden;
@@ -488,8 +497,8 @@ a {
 	}
 
 .wrapper--no-padding-until-medium {
-		padding-left: 0;
-		padding-right: 0;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 
 @media (min-width: 780px) {
@@ -517,7 +526,7 @@ a {
 		margin-bottom: 1rem;
 	}
 
-@media (min-width: 370px) {
+@media (min-width: 400px) {
 
 .wrapper--b-margin {
 			margin-bottom: 3.875rem
@@ -534,8 +543,8 @@ a {
 	width: 100%;
 	height: 150px;
 	background-image: url('../../assets/images/kfum_trans.png'), url('../../assets/images/hyt2_banner.jpg');
-	background-position: right center, center center;
-	background-size: 18%, 200%;
+	background-position: right bottom, center center;
+	background-size: 30%, 200%;
 	background-repeat: no-repeat;
 	position: relative;
 }
@@ -552,10 +561,11 @@ a {
 		width: 80%;
 	}
 
-@media (min-width: 370px) {
+@media (min-width: 400px) {
 
 .topbanner {
-		background-size: 14%, 200%
+		background-size: 20%, 200%;
+		background-position: right center, center center
 }
 		.topbanner p {
 			font-size: 1.5rem;
@@ -568,7 +578,8 @@ a {
 .topbanner {
 		
 		height: 200px;
-		background-size: 14%, 150%
+		background-size: 14%, 150%;
+		background-position: right center, center center
 }
 
 		.topbanner p {
@@ -594,6 +605,7 @@ a {
 	padding: 5px 0;
 	position: absolute;
 	width: 100%;
+
 	z-index: 2;
 	background-color: rgba(0,113,98, .55);
 	-webkit-transition: background-color .3s ease-out;
@@ -613,6 +625,7 @@ a {
 		background-color: rgba(0,113,98, .66);	
 		
 		width: 100%;
+		height: 1.9rem;
 		display: block;
 		text-align: center;
 		padding: 5px 0;
@@ -621,6 +634,11 @@ a {
 }
 		.site-header--dark {
 			background-color: rgba(0,113,98, .85);	
+		}
+
+		.site-header nav ul li a {
+			color: yellow;
+			display: inline;
 		}
 	}
 
@@ -701,7 +719,7 @@ a {
 			        transform: rotate(-45deg) scaleX(1.25) translateY(1px);
 		}
 
-.site-header__menu-content {
+.site-header__menu-content{
 		opacity: 0;
 		-webkit-transform: scale(1.2);
 		        transform: scale(1.2);
@@ -713,25 +731,132 @@ a {
 		
 		padding-top: 90px;
 		text-align: center;
+
 	}
 
 @media (min-width: 780px) {
 
-.site-header__menu-content {
-			opacity: 1;
+.site-header__menu-content{
+			opacity: 0;
+			width: 40px;
 			z-index: 1;
 			padding-top: 0;
 			-webkit-transform: scale(1);
 			        transform: scale(1)
+
 	}
 	}
 
 .site-header__menu-content--is-visible {
 			opacity: 1;
+			width: 100px;
+			display: block;
 			z-index: 1;
 			-webkit-transform: scale(1);
 			        transform: scale(1);
+		
 		}
+
+.site-header__menu-content li {
+			display: inline;
+			border: 1px solid red;
+			padding: 10 px;
+		}
+
+.meetings {
+	text-align: center;
+
+
+
+
+
+}
+
+.meetings p {
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 10px;
+		font-size: .85rem;
+		color: #007162;
+		font-weight: bold;
+	}
+
+@media (min-width: 780px) {
+		.meetings p {
+			display: block;
+			font-size: 1.2rem;
+		}
+			.meetings p::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+	}
+
+/* meetings */
+
+.main-page #traetop {
+		width: 100%;
+		height: auto;
+	}
+
+@media (min-width: 780px) {
+
+.main-page #traetop {
+			width: 50%;
+			height: auto;
+			float: right
+	}
+	}
+
+.main-page p {
+		font-size: 0.8rem;
+		font-weight: bold;
+		text-align: justify;
+	}
+
+@media (min-width: 780px) {
+
+.main-page p {
+			font-size: 0.7rem
+	}
+	}
+
+.bliv_medlem {
+	clear: both;
+	text-align: center;
+	width: 100%;
+	height: auto;
+	
+
+}
+
+.bliv_medlem img {
+	width: 400px;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.clear {
+	clear: both;
+}
+
+#spejderi {
+
+	width: 100%;
+	float: none;
+		
+}
+
+@media (min-width: 780px) {
+
+#spejderi {
+		float: left;
+		width: 48%
+		
+}
+	}
 
 .primary-nav2 {
 	padding-top: 0px;
@@ -742,6 +867,7 @@ a {
 .primary-nav2 ul {
 		margin: 0;
 		padding: 0;
+		text-align: center;
 	}
 
 .primary-nav2 ul::after {
@@ -752,7 +878,8 @@ a {
 
 .primary-nav2 li {
 		list-style: none;
-		float: left;
+		display: inline;
+		font-size: 1rem;
 		padding-right: 15px;
 	}
 

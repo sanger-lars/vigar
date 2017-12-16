@@ -3,7 +3,9 @@
 	align-content: center;
 
 	@mixin atMedium {
+		width: 80%;
 		padding-top: 0;
+		margin: 0 auto;
 	}
 
 	&--center {

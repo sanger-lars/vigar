@@ -6,6 +6,7 @@
 	max-width: 936px;
 	margin-left: auto;
 	margin-right: auto;
+	
 
 	&--medium {
 		max-width: 700px;
@@ -16,8 +17,8 @@
 	}
 
 	&--no-padding-until-medium {
-		padding-left: 0;
-		padding-right: 0;
+		padding-left: 10px;
+		padding-right: 10px;
 		
 		@mixin atMedium {
 			padding-left: 18px;
