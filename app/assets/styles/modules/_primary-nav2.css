@@ -6,25 +6,71 @@
 	ul {
 		margin: 0;
 		padding: 0;
-		text-align: center;
+		
+		
 		@mixin clearfix;
 	}
+li:hover, .dropdown-content a:hover {
+	background-color: $logoRed;
+	a {
+		color: $logoYellow;
+	}
+}
+li:hover {
+	background-color: $logoRed;
+}
+a:hover {
+	color: logoYellow;
+}
 
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba($logoGreen, .66);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: $logoYellow;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 	li {
-		list-style: none;
-		display: inline;
-		font-size: 1rem;
-		padding-right: 15px;
+		list-style: none;		
+		font-size: 1.5rem;
+		padding: 5px;
+		display: list-item;
+
+		@mixin atMedium {
+			display: inline;
+			padding-right: 15px;
+			font-size: 1rem;
+		}
+
+		@mixin atLarge {
+			font-size: 1.2rem;
+		}
 	}
 
-
-	@mixin atMedium {
-		font-size: 1rem;
-
+	&--centered {
+		ul
+			{text-align: center;}
+		
 	}
-
-	@mixin atLarge {
-		font-size: 1.2rem;
-	}
-
 }

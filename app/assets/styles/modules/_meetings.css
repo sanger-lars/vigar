@@ -9,6 +9,13 @@
 		font-weight: bold;
 	}
 
+	@mixin atSmall {
+		p {
+			font-size: .92rem;
+		}
+
+	}
+
 	@mixin atMedium {
 		p {
 			@mixin clearfix;
