@@ -23,3 +23,11 @@ a:hover {
 	font-weight: bold;
 	cursor: pointer;
 };
+
+iframe {
+	height: 400px;
+
+	@mixin atMedium {
+			height: 600px;
+		}
+}

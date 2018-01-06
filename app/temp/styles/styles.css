@@ -478,6 +478,17 @@ a:hover {
 	cursor: pointer;
 };
 
+iframe {
+	height: 400px;
+}
+
+@media (min-width: 780px) {
+
+iframe {
+			height: 600px
+}
+	}
+
 .wrapper {
 	overflow: hidden;
 	padding-left: 18px;
