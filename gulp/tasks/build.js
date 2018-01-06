@@ -57,4 +57,6 @@ gulp.task('usemin', ['deleteDistFolder', 'styles', 'scripts'], function(){
 
 
 
-gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'optimizeImages', 'usemin']);
+gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'optimizeImages', 'usemin'], function(){
+	console.log("kør gulp previewDist for at se resultatet");
+});
