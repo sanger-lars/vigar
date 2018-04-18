@@ -4,12 +4,13 @@ del = require('del'),
 usemin = require('gulp-usemin'),
 rev = require('gulp-rev'),
 cssnano = require('gulp-cssnano'),
-browserSync = require('browser-sync').create(),
-convertEncoding = require('gulp-convert-encoding');
+browserSync = require('browser-sync').create();
+ 
 
 gulp.task('deleteDistFolder', function(){
 	return del("./docs");
 });
+
 
 gulp.task('previewDist', function() {
 	browserSync.init ({
@@ -19,7 +20,6 @@ gulp.task('previewDist', function() {
 		}
 	});
 });
-
 
 
 gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() {
@@ -36,6 +36,7 @@ gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() {
 		.pipe(gulp.dest("./docs"));
 });
 
+
 gulp.task('optimizeImages', ['deleteDistFolder'], function(){
 	return gulp.src(['./app/assets/images/**/*'])
 		.pipe(imagemin({
@@ -46,6 +47,7 @@ gulp.task('optimizeImages', ['deleteDistFolder'], function(){
 		.pipe(gulp.dest("./docs/assets/images"));
 });
 
+
 gulp.task('usemin', ['deleteDistFolder', 'styles', 'scripts'], function(){
 	return gulp.src(["./app/*.html",])
 		.pipe(usemin({
@@ -55,11 +57,6 @@ gulp.task('usemin', ['deleteDistFolder', 'styles', 'scripts'], function(){
 		.pipe(gulp.dest("./docs"));
 });
 
-gulp.task('convert', ['build'], function() {
-	return gulp.src(['./docs/*.html'])
-		.pipe(convertEncoding({to: 'UTF-8'}))
-        .pipe(gulp.dest('./docs'));
-});
 
 gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'optimizeImages', 'usemin'], function(){
 	console.log("kør    gulp previewDist    for at se resultatet");
