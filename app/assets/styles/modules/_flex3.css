@@ -1,0 +1,85 @@
+.flex3 {
+	display: block;
+	align-items: center;
+
+	@mixin atMedium {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+	&--1 {
+		-webkit-flex: 1;
+		-moz-flex: 1;
+		-ms-flex: 1;
+		-o-flex: 1;
+		flex: 1;
+		-webkit-order: 1;
+		-moz-order: 1;
+		-ms-order: 1;
+		-o-order: 1;
+		order: 1;
+		width: 30%;
+		text-align: right;
+		justify-content: center;
+		vertical-align: center;
+		align-self: center;
+	}
+
+	&--2 {
+		-webkit-flex: 2;
+		-moz-flex: 2;
+		-ms-flex: 2;
+		-o-flex: 2;
+		flex: 2;
+		-webkit-order: 2;
+		-moz-order: 2;
+		-ms-order: 2;
+		-o-order: 2;
+		order: 2;
+		width: 30%;
+	}
+
+	&--3 {
+		-webkit-flex: 1;
+		-moz-flex: 1;
+		-ms-flex: 1;
+		-o-flex: 1;
+		flex: 1;
+		-webkit-order: 3;
+		-moz-order: 3;
+		-ms-order: 3;
+		-o-order: 3;
+		order: 3;
+		text-align: left;
+		vertical-align: center;
+		align-self: center;
+	}
+
+	
+
+	}
+}
+
+.logoB {
+	@mixin atMedium {
+		&--v {
+			max-width:200px;
+			height: auto;
+		}
+		
+		&--h {
+			max-width:250px;
+			height: auto;
+		}
+	}
+	
+}
+
+
+.content {
+	font-size: 1.0rem;
+
+	@mixin atLarge {
+		font-size: 1.8rem;
+	}
+}

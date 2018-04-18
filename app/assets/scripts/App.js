@@ -1,6 +1,6 @@
 
 
-import MobileMenu from './modules/MobileMenu.js';
+import MobileMenu from './modules/MobileMenu2.js';
 
 /*import RevealOnScroll from './modules/RevealOnScroll';
 import $ from 'jquery';

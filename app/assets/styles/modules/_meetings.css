@@ -24,7 +24,13 @@
 		}
 	}
 
-
+	@mixin atLarge {
+		p {
+			@mixin clearfix;
+			display: block;
+			font-size: 1.8rem;
+		}
+	}
 
 
 

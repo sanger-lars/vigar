@@ -10,16 +10,22 @@
 			float: right;
 		}
 	}
-
-
 		
 	p {
 		font-size: 0.8rem;
 		font-weight: bold;
 		text-align: justify;
+		
+		@mixin atSmall {
+			font-size: 0.9rem;
+		}
 
  		@mixin atMedium {
 			font-size: 0.7rem;
+		}
+
+		@mixin atLarge {
+			font-size: 1.0rem;
 		}
 	}
 }
@@ -30,6 +36,7 @@
 	text-align: center;
 	width: 100%;
 	height: auto;
+	padding-top: 20px;
 	
 
 }

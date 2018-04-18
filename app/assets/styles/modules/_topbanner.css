@@ -2,7 +2,7 @@
 	display: inline-block;
 	width: 100%;
 	height: 150px;
-	background-image: url('../../assets/images/kfum_trans.png'), url('../../assets/images/hyt2_banner.jpg');
+	background-image: url('../../assets/images/logos/kfum_trans.png'), url('../../assets/images/bannere/hyt2_banner.jpg');
 	background-position: right bottom, center center;
 	background-size: 30%, 200%;
 	background-repeat: no-repeat;

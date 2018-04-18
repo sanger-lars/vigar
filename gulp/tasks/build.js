@@ -4,8 +4,8 @@ del = require('del'),
 usemin = require('gulp-usemin'),
 rev = require('gulp-rev'),
 cssnano = require('gulp-cssnano'),
-browserSync = require('browser-sync').create();
-
+browserSync = require('browser-sync').create(),
+convertEncoding = require('gulp-convert-encoding');
 
 gulp.task('deleteDistFolder', function(){
 	return del("./docs");
@@ -55,8 +55,12 @@ gulp.task('usemin', ['deleteDistFolder', 'styles', 'scripts'], function(){
 		.pipe(gulp.dest("./docs"));
 });
 
-
+gulp.task('convert', ['build'], function() {
+	return gulp.src(['./docs/*.html'])
+		.pipe(convertEncoding({to: 'UTF-8'}))
+        .pipe(gulp.dest('./docs'));
+});
 
 gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'optimizeImages', 'usemin'], function(){
-	console.log("kør gulp previewDist for at se resultatet");
+	console.log("kør    gulp previewDist    for at se resultatet");
 });
